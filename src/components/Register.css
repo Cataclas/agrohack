@@ -1,0 +1,108 @@
+/* Estilos generales */
+#registro.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F0F9F4;
+    padding: 2rem;
+    background-image: url('../../public/plant-background.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Formulario de registro */
+.register-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    /* Fondo blanco semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Títulos */
+.register-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2F4F4F;
+    /* Verde oscuro */
+}
+
+/* Grupo de formularios */
+.register-form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.register-form .form-group input,
+.register-form .form-group select {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid #A5C9A7;
+    /* Bordes suaves, verde claro */
+    transition: all 0.3s ease;
+}
+
+/* Estilos para inputs y selects */
+.register-form .form-group input {
+    width: calc(100% - 5rem - 2px);
+}
+
+.register-form .form-group select {
+    width: 100%;
+}
+
+.register-form .form-group input:focus,
+.register-form .form-group select:focus {
+    border-color: #74A057;
+    /* Verde más fuerte */
+    outline: none;
+    box-shadow: 0 0 5px rgba(116, 160, 87, 0.5);
+    /* Sombra verde suave */
+}
+
+/* Iconos */
+.register-form .form-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #A5C9A7;
+    /* Color suave para los iconos */
+}
+
+/* Botón */
+.register-form .btn-submit {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: #74A057;
+    /* Verde principal */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.register-form .btn-submit:hover {
+    background: #568E44;
+    /* Verde más oscuro */
+}
+
+/* Estilos para pantalla pequeña */
+@media (max-width: 768px) {
+    .register-form {
+        padding: 1.5rem;
+    }
+
+    .register-form h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,90 @@
+.map-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f8fa;
+}
+
+.map-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  height: 80%;
+  width: calc(100% - 6rem);
+  max-width: 1200px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: auto;
+  padding: 3rem;
+  text-align: center;
+}
+
+#map .container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenedor de la sección principal (mapa y datos) */
+.main-content {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Contenedor del mapa */
+.map-container {
+  flex: 1;
+  height: 80vh;
+  /* Ajusta la altura del mapa */
+  margin-right: 20px;
+}
+
+/* Contenedor de los datos del marcador */
+.marker-info {
+  width: 300px;
+  /* Ancho fijo */
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+/* Estilos para los elementos dentro de los datos del marcador */
+.marker-info h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.marker-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.marker-info li {
+  margin-bottom: 15px;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .map-container {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .marker-info {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

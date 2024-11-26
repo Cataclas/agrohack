@@ -2,6 +2,19 @@
   text-align: center;
 }
 
+body {
+  font-family: 'Public Sans', sans-serif;
+  background-size: cover;
+  /* Asegura que la imagen cubra todo el fondo */
+  background-position: center;
+  /* Centra la imagen */
+  background-attachment: fixed;
+  /* Mantiene la imagen fija mientras se hace scroll */
+  margin: 0;
+  /* Elimina el margen por defecto del body */
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -28,10 +41,34 @@
   color: #61dafb;
 }
 
+.roles {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+
+.roles button {
+  display: inline-block;
+  padding: .5rem 2rem;
+  font-size: 1.1rem;
+  color: white;
+  background: #74A057;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.roles button:hover {
+  background: #568E44;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

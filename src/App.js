@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import Notificaciones from "./pages/Notificaciones";
+import Dashboard from "./pages/Dashboard";
+import RegisterPage from "./pages/RegisterPage";
+import MapPage from "./pages/MapPage";
+import { UserProvider, useUser } from './contexts/UserContext';
 import './App.css';
+
+
+// Componente para cambiar el rol
+const RoleButtons = () => {
+  const { setUserRole } = useUser();
+
+  return (
+    <div className="roles">
+      <button onClick={() => setUserRole('productor')}>Productor</button>
+      <button onClick={() => setUserRole('comprador')}>Comprador</button>
+      <button onClick={() => setUserRole('distribuidor')}>Distribuidor</button>
+    </div>
+  );
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserProvider>
+      <BrowserRouter>
+        <RoleButtons /> {/* Agrega los botones para cambiar el rol aquí */}
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/notificaciones" element={<Notificaciones />} />
+          <Route path="/registro" element={<RegisterPage />} />
+          <Route path="/mapa" element={<MapPage />} />
+        </Routes>
+      </BrowserRouter>
+    </UserProvider>
   );
 }
 

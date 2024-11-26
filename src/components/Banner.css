@@ -1,0 +1,121 @@
+/* Estilos generales */
+.banner {
+    text-align: center;
+    padding: 1rem;
+    color: #356859;
+    position: relative;
+    /* Para asegurarnos de que los elementos se superpongan correctamente */
+    display: flex;
+    background: #fafafa;
+}
+
+.banner img {
+    height: auto;
+    /* Mantiene la relación de aspecto */
+    width: 30%;
+    float: left;
+    padding: 2rem;
+}
+
+.content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    z-index: 1;
+    /* Hace que el texto esté por encima de la imagen */
+}
+
+.subtitle {
+    font-size: 2rem;
+    z-index: 1;
+    /* Asegura que el subtítulo esté por encima de la imagen */
+}
+
+.actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem 0rem;
+}
+
+.botonUno {
+    padding: 1rem 2rem;
+    background: green;
+    border-radius: 2rem;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+.botonDos {
+    padding: 1rem 2rem;
+    color: green;
+    border: 1px solid green;
+    border-radius: 2rem;
+    font-weight: bold;
+    font-size: large;
+}
+
+/* Media Queries para Pantallas más pequeñas */
+@media (max-width: 1400px) {
+    .title {
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .actions {
+        gap: 1rem;
+        z-index: 2;
+    }
+
+    .botonUno,
+    .botonDos {
+        font-size: 1rem;
+        color: white;
+        border-radius: 2rem;
+        font-weight: bold;
+        font-size: large;
+        padding: 1rem 2rem;
+    }
+
+    .botonDos {
+        border: 2px solid greenyellow;
+        background: rgb(255 255 255 / 30%);
+    }
+
+    .botonUno {
+        background: green;
+    }
+
+    .banner img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Fondo oscuro con opacidad */
+        z-index: 1;
+    }
+}

@@ -1,0 +1,84 @@
+/* Estilos para el Footer */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #356859;
+    color: #fff;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.member-link {
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.member-link:hover {
+    transform: scale(1.05);
+    /* Efecto de hover */
+}
+
+.member-image {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 3px solid #fff;
+    /* Borde blanco para destacar la imagen */
+}
+
+.member-details h4 {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: .5rem 0;
+}
+
+.member-details p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0;
+    padding: 0 0 .5rem 0;
+}
+
+.rights {
+    margin: 0;
+    padding: 1rem 0 0 0;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        margin-bottom: 20px;
+    }
+
+    .member-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .member-details h4 {
+        font-size: 1rem;
+    }
+
+    .member-details p {
+        font-size: 0.9rem;
+    }
+}

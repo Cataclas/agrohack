@@ -1,0 +1,154 @@
+.chart-analysis {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 8px;
+    animation: highlight 0.5s ease-in-out;
+    border: 2px solid #4CAF50;
+    background-color: #f9fdf9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.chart-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+.chart-content {
+    text-align: left;
+    max-height: 600px;
+    overflow: auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 15px;
+}
+
+.chart-loading {
+    font-style: italic;
+    color: #888;
+}
+
+.chart-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    color: #444;
+}
+
+.chart-subtitle {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.chart-text {
+    margin: 10px 0;
+    color: #555;
+}
+
+.chart-bot {
+    display: flex;
+    border-radius: 1rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.bot-image {
+    height: 100px;
+    border: 2px solid #4CAF50;
+    border-radius: 50%;
+    background: lightgoldenrodyellow;
+}
+
+
+.question-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.question-input {
+    width: calc(100% - 20px);
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.question-submit {
+    background: #4caf50;
+    border: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    color: white;
+    margin-top: .5rem;
+    cursor: pointer;
+}
+
+.question-response {
+    text-align: left;
+    background: white;
+    border-radius: 15px;
+}
+
+.question-response>div {
+    padding: 1rem 0 1rem 1rem;
+    overflow: auto;
+    max-height: 200px;
+}
+
+.question-response>div table {
+    border-collapse: collapse;
+    margin: 1rem auto;
+}
+
+.question-response>div table th,
+.question-response>div table td {
+    border: 1px solid grey;
+    padding: .25rem .5rem;
+}
+
+.question-response p {
+    color: #555;
+    margin: 0;
+    padding-right: 1rem;
+}
+
+.question-response h4 {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.selected-chart {
+    color: #4CAF50;
+}
+
+
+.selected-chart {
+    animation: highlight 0.5s ease-in-out;
+    border: 2px solid #4CAF50;
+    background-color: #f9fdf9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+@keyframes highlight {
+    0% {
+        transform: scale(1);
+        background-color: #e8f5e9;
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: #f9fdf9;
+    }
+}

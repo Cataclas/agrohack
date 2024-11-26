@@ -1,0 +1,323 @@
+/* Estilos generales */
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 3rem;
+    font-family: 'Public Sans', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 6rem);
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 3rem;
+}
+
+/* Añadir padding al contenido para que no quede oculto debajo del header */
+body {
+    padding-top: 5rem;
+    /* Ajusta esto según la altura de tu header */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    padding: 0 3rem 0 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: inherit;
+}
+
+.logo a:focus,
+.logo a:active,
+.logo a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo i {
+    padding-right: 1rem;
+    color: green;
+}
+
+/* Icono de hamburguesa */
+.hamburger-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
+.hamburger-icon div {
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    border-radius: 5px;
+}
+
+/* Menú general */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    background-color: #fff;
+}
+
+/* Cuando la clase 'show' se activa */
+.menu.show {
+    max-height: 400px;
+    opacity: 1;
+    overflow: visible;
+}
+
+.menu nav,
+.menu .auth {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Estilo base para los ítems del menú */
+.navItem {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000;
+    position: relative;
+    padding: 5px 0;
+    /* espacio adicional para el border-bottom */
+}
+
+/* Efecto hover y activo con border-bottom expandido */
+.navItem::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: green;
+    /* Color del border-bottom */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navItem:hover::after,
+.navItem.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Añadir clase 'active' cuando la página esté activa en ese ítem */
+.navItem.active {
+    font-weight: bold;
+}
+
+.navItem,
+.authItemUno,
+.authItemDos {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000;
+}
+
+.authItemUno {
+    color: green;
+    padding: 0.5rem 1.5rem;
+}
+
+.authItemDos {
+    color: #000;
+    border: 2px solid green;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+}
+
+/* Estilos generales */
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 4rem;
+    right: 10rem;
+}
+
+/* Formulario de inicio de sesión */
+.login-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Títulos */
+.login-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2F4F4F;
+    /* Verde oscuro */
+}
+
+/* Grupo de formularios */
+.login-form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.login-form .form-group input {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid #A5C9A7;
+    /* Bordes suaves, verde claro */
+    transition: all 0.3s ease;
+    width: calc(100% - 5rem - 2px);
+    /* Ajusta el ancho para dar espacio para el icono */
+}
+
+/* Estilos para inputs */
+.login-form .form-group input:focus {
+    border-color: #74A057;
+    /* Verde más fuerte */
+    outline: none;
+    box-shadow: 0 0 5px rgba(116, 160, 87, 0.5);
+    /* Sombra verde suave */
+}
+
+/* Iconos */
+.login-form .form-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #A5C9A7;
+    /* Color suave para los iconos */
+}
+
+/* Botón */
+.btn-submit {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: #74A057;
+    /* Verde principal */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #568E44;
+    /* Verde más oscuro */
+}
+
+/* Estilos del enlace para recuperar la contraseña */
+.password-recovery {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #74A057;
+}
+
+.password-recovery a {
+    text-decoration: none;
+    color: #74A057;
+}
+
+.password-recovery a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para pantalla pequeña */
+@media (max-width: 768px) {
+    .login-form {
+        padding: 1.5rem;
+    }
+
+    .login-form h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 1040px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 3rem;
+        font-family: 'Public Sans', sans-serif;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hamburger-icon {
+        display: flex;
+    }
+
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu.show {
+        max-height: 400px;
+        padding: 1rem 0;
+        margin-top: 1rem;
+        box-shadow: 0 10px 20px 0px rgb(0 0 0 / 50%);
+        border-radius: 10px;
+    }
+
+    nav,
+    .auth {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navItem {
+        padding: 0.5rem 0;
+    }
+
+    .authItemUno,
+    .authItemDos {
+        text-align: center;
+        width: calc(100% - 3rem - 4px);
+    }
+
+    .authItemDos {
+        border-right: none;
+        border-left: none;
+        border-radius: 0;
+    }
+}
