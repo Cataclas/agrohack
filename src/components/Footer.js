@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <p className="rights">&copy; 2024 AgroHack. All rights reserved.</p>
+      <p className="rights">&copy; 2024 AgroHelp. All rights reserved.</p>
     </footer>
   );
 };

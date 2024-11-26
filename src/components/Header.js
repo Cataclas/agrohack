@@ -46,7 +46,7 @@ const Header = () => {
         <div className="logo">
           <Link to="/">
             <i className="fas fa-leaf"></i>
-            <b>A</b>gro<b>H</b>ack
+            <b>A</b>gro<b>H</b>elp
           </Link>
         </div>
 
@@ -66,13 +66,12 @@ const Header = () => {
       {/* Menú desplegable */}
       <div className={`menu ${menuOpen ? "show" : ""}`}>
         <nav>
-          <Link to="/#home" className={getNavItemClass("/")}>Inicio</Link>
-          <a href="/#beneficios" className="navItem">¿Por qué elegirnos?</a>
-          <a href="/#contacto" className="navItem">Contacto</a>
-          <Link to="/dashboard" className={getNavItemClass("/dashboard")}>Dashboard</Link>
-          <Link to="/notificaciones" className={getNavItemClass("/notificaciones")}>Notificaciones</Link>
+          <Link to="/inicio" className={getNavItemClass("/inicio")}>Inicio</Link>
+          <Link to="/tienda" className={getNavItemClass("/tienda")}>Tienda</Link>
           <Link to="/mapa" className={getNavItemClass("/mapa")}>Mapa</Link>
-
+          <Link to="/dashboard" className={getNavItemClass("/dashboard")}>Datos</Link>
+          <Link to="/certificados" className={getNavItemClass("/certificados")}>Certificados</Link>
+          <Link to="/notificaciones" className={getNavItemClass("/notificaciones")}>Notificaciones</Link>
         </nav>
         <div className="auth">
           <a

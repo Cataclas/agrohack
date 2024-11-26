@@ -4,12 +4,18 @@ import { Chart as ChartJS, registerables } from "chart.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSeedling, faDollarSign, faLeaf, faChartLine, faFilter } from "@fortawesome/free-solid-svg-icons";
 import ChartAnalysis from "./ChartAnalysis"; // Nuevo componente
+import { useUser } from "../contexts/UserContext";
+import roleConfigDashboard from "../config/rolConfigDashboard";
+
 import "./Dashboard.css";
 
 // Registrar los tipos de gráficos
 ChartJS.register(...registerables);
 
 const Dashboard = () => {
+    const { role } = useUser();
+    const roleData = roleConfigDashboard[role]?.dashboard || {};
+    const { userRole } = useUser();
     const [selectedChart, setSelectedChart] = useState(null);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1240); // Detecta si es móvil
     const [showFiltersModal, setShowFiltersModal] = useState(false); // Controla el modal
@@ -186,7 +192,7 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard">
-            <h2>Dashboard Interactivo</h2>
+            <h2>Dashboard - {role}</h2>
 
             {/* Botón para abrir modal en móvil */}
             {isMobile && (
@@ -204,24 +210,24 @@ const Dashboard = () => {
                     <div className="modal-content">
                         <h4 className="modal-title">Filtros</h4>
                         <button className="close-button" onClick={toggleModal}>×</button>
-                        <Filters filters={filters} handleFilterChange={handleFilterChange} />
+                        <Filters filters={roleData.filters || []} handleFilterChange={() => { }} />
                     </div>
                 </div>
             )}
 
             {/* Filtros normales para escritorio */}
-            {!isMobile && <Filters filters={filters} handleFilterChange={handleFilterChange} />}
+            {!isMobile && <Filters filters={roleData.filters || []} handleFilterChange={() => { }} />}
 
             {/* Tarjetas de Indicadores */}
             <div className="indicators-container">
-                {indicators.map((indicator) => (
+                {roleData.indicators?.map((indicator) => (
                     <div
                         key={indicator.id}
                         className="indicator-card"
                         style={{ borderLeft: `.5rem solid ${indicator.color}` }}
                     >
                         <FontAwesomeIcon
-                            icon={indicator.icon}
+                            icon={indicator.icon || faFilter} // Si tienes íconos en los indicadores
                             className="indicator-icon"
                             style={{ color: indicator.color, height: "50px" }}
                         />
@@ -233,17 +239,19 @@ const Dashboard = () => {
                 ))}
             </div>
 
-            {/* Gráficas */}
+            {/* Gráficas y análisis */}
             <div className="dashboard-layout">
                 <div className="charts-container">
-                    {charts.map((chart) => (
+                    {roleData.charts?.map((chart) => (
                         <div
                             key={chart.id}
                             className={`chart ${selectedChart?.id === chart.id ? "chart-selected" : ""}`}
                             onClick={() => setSelectedChart(chart)}
                         >
                             <h3>{chart.title}</h3>
-                            <chart.component data={chart.data} />
+                            {chart.id === "bar" && <Bar data={chart.data} />}
+                            {chart.id === "line" && <Line data={chart.data} />}
+                            {chart.id === "pie" && <Pie data={chart.data} />}
                         </div>
                     ))}
                 </div>

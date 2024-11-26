@@ -43,9 +43,12 @@ body {
 
 .roles {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 1rem;
+  width: calc(100% - 2rem);
+  border-top: 3px solid grey;
+  border-bottom: 3px solid grey;
 }
 
 .roles button {
@@ -53,11 +56,20 @@ body {
   padding: .5rem 2rem;
   font-size: 1.1rem;
   color: white;
-  background: #74A057;
-  border: none;
-  border-radius: 25px;
+  background: #4caf50;
+  border: 1px solid;
+  border-radius: 0;
   cursor: pointer;
   transition: background 0.3s ease;
+  width: calc((100% / 3) - 6px);
+}
+
+.roles button:first-child {
+  background: #ff9800;
+}
+
+.roles button:last-child {
+  background: #e91e63;
 }
 
 .roles button:hover {
