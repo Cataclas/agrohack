@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Cataclas/agrohack/static/css/main.6cdb78f4.css",
+    "main.js": "/Cataclas/agrohack/static/js/main.60e6396d.js",
+    "static/js/453.95afe55e.chunk.js": "/Cataclas/agrohack/static/js/453.95afe55e.chunk.js",
+    "index.html": "/Cataclas/agrohack/index.html",
+    "static/media/plant-background.svg": "/Cataclas/agrohack/static/media/plant-background.eb3d98ec4b32f75f7121.svg",
+    "main.6cdb78f4.css.map": "/Cataclas/agrohack/static/css/main.6cdb78f4.css.map",
+    "main.60e6396d.js.map": "/Cataclas/agrohack/static/js/main.60e6396d.js.map",
+    "453.95afe55e.chunk.js.map": "/Cataclas/agrohack/static/js/453.95afe55e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cdb78f4.css",
+    "static/js/main.60e6396d.js"
+  ]
+}
