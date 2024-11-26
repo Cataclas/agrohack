@@ -1,7 +1,7 @@
 {
   "name": "hackaton-agro",
   "version": "0.1.0",
-  "homepage": "https://github.com/Cataclas/agrohack",
+  "homepage": "https://cataclas.github.io/agrohack",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
