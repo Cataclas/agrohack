@@ -66,7 +66,7 @@ const Header = () => {
       {/* Menú desplegable */}
       <div className={`menu ${menuOpen ? "show" : ""}`}>
         <nav>
-          <Link to="/inicio" className={getNavItemClass("/inicio")}>Inicio</Link>
+          <Link to="/" className={getNavItemClass("/")}>Inicio</Link>
           <Link to="/tienda" className={getNavItemClass("/tienda")}>Tienda</Link>
           <Link to="/mapa" className={getNavItemClass("/mapa")}>Mapa</Link>
           <Link to="/dashboard" className={getNavItemClass("/dashboard")}>Datos</Link>

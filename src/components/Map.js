@@ -14,9 +14,9 @@ L.Marker.prototype.options.icon = L.icon({
 
 const Map = ({ center, zoom, markers }) => {
     return (
-        <div className="map-container">
+        <div>
             <h1 className="map-title">Mapa del Sector Agro</h1>
-            <MapContainer center={center} zoom={zoom} style={{ height: "80vh", width: "100%", "border-radius": "1rem" }}>
+            <MapContainer center={center} zoom={zoom} style={{ height: "80vh", width: "100%", borderRadius: "1rem" }}>
                 {/* Tile layer - Mapa base de OpenStreetMap */}
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -25,7 +25,10 @@ const Map = ({ center, zoom, markers }) => {
                 {/* Marcadores dinámicos */}
                 {markers.map((marker, index) => (
                     <Marker key={index} position={marker.position}>
-                        <Popup>{marker.popupText}</Popup>
+                        <Popup>
+                            {/* Imprimir el contenido HTML en consola para asegurarse */}
+                            <div dangerouslySetInnerHTML={{ __html: marker.popupText }} />
+                        </Popup>
                     </Marker>
                 ))}
             </MapContainer>
