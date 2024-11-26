@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/agrohack/static/css/main.10a75de4.css",
-    "main.js": "/agrohack/static/js/main.ae905085.js",
+    "main.css": "/agrohack/static/css/main.448c6737.css",
+    "main.js": "/agrohack/static/js/main.c3f6748e.js",
     "static/js/453.95afe55e.chunk.js": "/agrohack/static/js/453.95afe55e.chunk.js",
     "index.html": "/agrohack/index.html",
     "static/media/plant-background.svg": "/agrohack/static/media/plant-background.eb3d98ec4b32f75f7121.svg",
-    "main.10a75de4.css.map": "/agrohack/static/css/main.10a75de4.css.map",
-    "main.ae905085.js.map": "/agrohack/static/js/main.ae905085.js.map",
+    "main.448c6737.css.map": "/agrohack/static/css/main.448c6737.css.map",
+    "main.c3f6748e.js.map": "/agrohack/static/js/main.c3f6748e.js.map",
     "453.95afe55e.chunk.js.map": "/agrohack/static/js/453.95afe55e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.10a75de4.css",
-    "static/js/main.ae905085.js"
+    "static/css/main.448c6737.css",
+    "static/js/main.c3f6748e.js"
   ]
 }
