@@ -4,7 +4,6 @@
     padding: 1rem;
     color: #356859;
     position: relative;
-    /* Para asegurarnos de que los elementos se superpongan correctamente */
     display: flex;
     background: #fafafa;
 }

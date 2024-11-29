@@ -1,42 +1,51 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHandshake,
-  faSeedling,
-  faChartLine,
-  faLifeRing,
+  faShieldAlt,
+  faSearch,
+  faUsers,
+  faDatabase,
+  faCloud,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Benefits = () => {
   const benefits = [
     {
-      icon: faHandshake,
-      title: "Conexión \nDirecta",
+      icon: faShieldAlt, // Icono de escudo, representando seguridad
+      title: "Seguridad \nInmediata",
       description:
-        "Facilitamos el contacto entre agricultores y compradores sin intermediarios.",
-      iconColor: "#7C9A92", // Color relacionado con agricultura
+        "Permite a los ciudadanos reportar incidentes en tiempo real, mejorando la capacidad de respuesta de las autoridades.",
+      iconColor: "#1E3A8A", // Azul oscuro, asociado con seguridad y confianza
     },
     {
-      icon: faChartLine,
-      title: "Aumento de \nProductividad",
+      icon: faSearch, // Icono de lupa, simbolizando análisis
+      title: "Análisis \nPredictivo",
       description:
-        "Accede a herramientas y recursos tecnológicos para optimizar tus cultivos.",
-      iconColor: "#2E8B57", // Verde más oscuro, asociado a crecimiento y agricultura
+        "Nuestra inteligencia artificial identifica patrones y genera mapas de calor, permitiendo anticipar y prevenir incidentes.",
+      iconColor: "#4B8B3B", // Verde, relacionado con inteligencia artificial y crecimiento
     },
     {
-      icon: faSeedling,
-      title: "Mercado \n Sostenible",
+      icon: faUsers, // Icono de personas, representando colaboración
+      title: "Colaboración \nCiudadana",
       description:
-        "Promovemos prácticas responsables que cuidan del medio ambiente.",
-      iconColor: "#6B8E23", // Verde oliva, simboliza sostenibilidad
+        "Fomentamos la participación activa de los ciudadanos para mejorar la seguridad colectiva mediante la colaboración y transparencia.",
+      iconColor: "#F59E0B", // Naranja, relacionado con la acción y el compromiso
     },
     {
-      icon: faLifeRing,
-      title: "Soporte \nContinuo",
+      icon: faDatabase, // Icono de bloque de cadena, representando la tecnología blockchain
+      title: "Transparencia \nTotal",
       description:
-        "Asistencia técnica para maximizar tu éxito en cada etapa.",
-      iconColor: "#FFD700", // Amarillo dorado, que simboliza apoyo y cuidado
+        "El uso de blockchain garantiza la transparencia en la recopilación y procesamiento de los datos, asegurando confianza entre ciudadanos y autoridades.",
+      iconColor: "#6366F1", // Azul morado, simboliza innovación y transparencia
     },
+    {
+      icon: faCloud, // Icono de nube, asociado con tecnología en la nube
+      title: "Escalabilidad \nGlobal",
+      description:
+        "Nuestra solución está basada en la nube, lo que permite expandirla fácilmente a cualquier ciudad o región sin limitaciones de infraestructura.",
+      iconColor: "#10B981", // Verde claro, asociado con crecimiento y tecnología
+    }
+
   ];
 
   return (
@@ -79,7 +88,7 @@ const styles = {
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
     gap: "3rem",
     marginTop: "2rem",
     padding: "5rem",

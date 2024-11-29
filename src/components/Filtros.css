@@ -1,0 +1,26 @@
+.slider-container {
+    margin: 10px 0;
+}
+
+.filtros-panel {
+    width: 20%;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.filtro-item {
+    margin-bottom: 20px;
+}
+
+.apply-filters {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}

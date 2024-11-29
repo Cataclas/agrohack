@@ -13,7 +13,7 @@ const Notificaciones = ({ notifications }) => {
                     {notifications.map((noti, index) => (
                         <li key={index} className={`notificacion-item ${noti.unread ? "unread" : ""}`}>
                             <div className="noti-image">
-                                <img src={noti.image} alt="Icono" />
+                                <i className="fas fa-leaf"></i> 
                             </div>
                             <div className="noti-content">
                                 <strong>{noti.title}</strong>

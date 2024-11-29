@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import "./ChartAnalysis.css";
+import { FiCopy } from "react-icons/fi";// Icono de copiar desde react-icons
 
-const botImage = `${process.env.PUBLIC_URL}/chatbot.png`;
+import "./ChartAnalysis.css";
+{/*
+const botImage = `${process.env.PUBLIC_URL}/sin_fondo_dos.png`; */}
+const botImage = `${process.env.PUBLIC_URL}/sin_fondo_dos.png`;
 
 
 const ChartAnalysis = ({ chart }) => {
@@ -82,6 +85,17 @@ const ChartAnalysis = ({ chart }) => {
             </ReactMarkdown>
         );
     };
+    const handleCopy = () => {
+        const contentToCopy = analysis || botResponse; // Copiar análisis o la respuesta del bot
+        navigator.clipboard.writeText(contentToCopy)
+            .then(() => {
+            })
+            .catch((err) => {
+                console.error("Error al copiar al portapapeles:", err);
+            });
+    };
+    
+
 
     return (
         <div className="chart-analysis">
@@ -126,6 +140,10 @@ const ChartAnalysis = ({ chart }) => {
                             <div>
                                 <h4>Análisis:</h4>
                                 {formatAnalysis(analysis)}
+                                {/* Botón de copiar */}
+                                <button className="copy-button" onClick={handleCopy}>
+                                    <FiCopy size={20} title="Copiar" /> {/* Icono de copiar */}
+                                </button>
                             </div>
                         )}
                     </>

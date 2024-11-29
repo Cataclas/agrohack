@@ -19,6 +19,12 @@
     padding: 1rem;
 }
 
+.chart-container-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .chart {
     width: 45%;
     min-width: 300px;
@@ -41,7 +47,8 @@
 .chart h3 {
     margin-bottom: 10px;
     font-size: 18px;
-    color: #333;
+    color: mediumblue;
+    padding: 0rem 0 2rem 0;
 }
 
 .analysis-container {
@@ -193,7 +200,6 @@
     width: 80%;
     max-width: 500px;
     border-radius: 8px;
-    padding: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     position: relative;
 }
@@ -228,6 +234,404 @@
 .filter-icon:hover {
     transform: scale(1.1);
     /* Efecto al pasar el cursor */
+}
+
+
+.dashboard h2 .fa-icon {
+    margin-left: 15px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+
+.modal-header>h4 {
+    margin: 1rem 0;
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+    height: 1.5rem;
+}
+
+/* Formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.modal-content label.label-with-icon {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4CAF50;
+    /* Resalta en verde al enfocar */
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.modal-content .schedule-options {
+    display: flex;
+    margin: 0;
+    padding: 1rem 3rem;
+    gap: 2rem;
+}
+
+.schedule-option input {
+    margin-right: 10px;
+}
+
+.schedule-option {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+}
+
+#dashboard button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+}
+
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    width: calc(40% - .5rem);
+}
+
+.btn-submit:hover {
+    background-color: #388e3c;
+}
+
+.btn-cancel {
+    background-color: #f44336;
+    color: white;
+    width: calc(40% - .5rem);
+}
+
+.btn-cancel:hover {
+    background-color: #d32f2f;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* Botón de cerrar */
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.schedule-option {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.schedule-option input {
+    margin-right: 10px;
+}
+
+/* Recurrencia tipo "Pills" */
+.pill-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pill {
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+    opacity: .8;
+}
+
+.pill.selected {
+    background-color: dodgerblue;
+    color: white;
+    opacity: .9;
+}
+
+.pill:hover {
+    opacity: 1;
+    box-shadow: 0 0 2px 0px grey;
+}
+
+.modal-content .form-group {
+    margin: 0;
+    padding: 1rem 3rem;
+}
+
+.modal-content>.form-group:first-child {
+    text-align: left;
+}
+
+.form-recurrencia {
+    padding-top: 1rem;
+    border-top: 2px solid #e7e5e5;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.bot-icon-modal {
+    height: 30px;
+}
+
+textarea,
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+.modal-actions .btn-submit {
+    padding: 10px 20px;
+    margin: 0;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #E91E63;
+    color: white;
+}
+
+/* Botones del modal */
+.modal-actions {
+    margin: 0;
+    padding: 1rem 3rem;
+    border-top: 2px solid #e7e5e5;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    border-bottom: 2px solid #efefef;
+    padding: 0 3rem;
+    position: relative;
+}
+
+.close-icon {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: indianred;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.close-icon:hover {
+    color: #ff0000;
+    /* Color rojo al pasar el mouse */
+}
+
+
+.title-dashboard {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-dashboard>h2 {
+    height: 2rem;
+    width: 100%;
+    margin: 1rem 0 !important;
+}
+
+.title-dashboard>div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2rem;
+    display: flex;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+
+.title-dashboard>div>svg {
+    height: 2rem;
+    cursor: pointer;
+}
+
+/* Estilo del label */
+.form-group label {
+    font-size: 1rem;
+    /* Tamaño del texto del label */
+    font-weight: bold;
+    /* Texto en negrita */
+    color: #333;
+    /* Color gris oscuro */
+    margin-bottom: 0.5rem;
+    /* Espaciado debajo del label */
+}
+
+/* Estilo del input de fecha y hora */
+.form-group input[type="datetime-local"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    width: calc(100% - 22px);
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo del input al enfocarse */
+.form-group input[type="datetime-local"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Estilos para el input con error (si es necesario) */
+.form-group input[type="datetime-local"].error {
+    border-color: #dc3545;
+    /* Borde rojo en caso de error */
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25);
+    /* Sombra roja */
+}
+
+/* Estilo para el contenedor de error (opcional) */
+.form-group .error-message {
+    color: #dc3545;
+    /* Color rojo para el mensaje de error */
+    font-size: 0.875rem;
+    /* Tamaño pequeño del texto */
+    margin-top: 0.25rem;
+    /* Espaciado superior */
+}
+
+/* Estilo para el botón PDF */
+.export-pdf {
+    color: #d32f2f;
+    /* Rojo, típico para PDF */
+}
+
+.export-pdf:hover {
+    color: #c62828;
+    /* Un tono más oscuro de rojo al hacer hover */
+}
+
+/* Estilo para el botón Word */
+.export-word {
+    color: #1976d2;
+    /* Azul, típico para Word */
+}
+
+.export-word:hover {
+    color: #1565c0;
+    /* Un tono más oscuro de azul al hacer hover */
+}
+
+/* Estilo para el botón Excel */
+.export-excel {
+    color: #388e3c;
+    /* Verde, típico para Excel */
+}
+
+.export-excel:hover {
+    color: #2c6f2f;
+    /* Un tono más oscuro de verde al hacer hover */
+}
+
+/* Estilo para el botón Correo */
+.send-email {
+    color: #0288d1;
+    /* Azul, típico para correo electrónico */
+}
+
+.send-email:hover {
+    color: #0277bd;
+    /* Un tono más oscuro de azul al hacer hover */
 }
 
 @media (max-width: 1240px) {

@@ -1,0 +1,4 @@
+#gestion .contenido {
+    display: flex;
+    flex-direction: row;
+}

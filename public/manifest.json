@@ -3,17 +3,17 @@
   "name": "Agro Hack",
   "icons": [
     {
-      "src": "planta-logo.png",
+      "src": "sin_fondo_dos.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "planta-logo.png",
+      "src": "sin_fondo_dos.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "planta-logo.png",
+      "src": "sin_fondo_dos.png",
       "type": "image/png",
       "sizes": "512x512"
     }

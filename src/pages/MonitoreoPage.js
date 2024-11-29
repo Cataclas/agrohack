@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import FiltrosMap from "../components/FiltrosMap";
+import Filtros from "../components/Filtros";
 import Map from "../components/Map";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -117,8 +117,10 @@ const MapPage = () => {
 
     return (
         <div className="container" id="map">
+
             <Header />
-            <div className="main-content">
+            <div className="main-content-monitor">
+                <Filtros />
 
                 <Map
                     center={userLocation || [4.711, -74.0721]}

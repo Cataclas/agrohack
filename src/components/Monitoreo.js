@@ -7,6 +7,7 @@ import "leaflet.heat"; // Importa el complemento de heatmap
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import reportes from "../config/reportes";
+import "./Monitoreo.css";
 
 // Configuración del ícono del marcador
 L.Marker.prototype.options.icon = L.icon({

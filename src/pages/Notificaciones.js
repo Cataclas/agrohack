@@ -6,61 +6,69 @@ import Footer from "../components/Footer";
 const NotificacionesPage = () => {
     const mockNotifications = [
         {
-            title: "Nueva Oferta",
-            message: "El precio del maíz bajó un 10% en el mercado.",
-            detail: "Válido hasta el 30 de noviembre.",
+            title: "Alerta de Seguridad",
+            message: "Se ha reportado un robo en tu vecindario.",
+            detail: "Revisa el mapa para más detalles y mantén precauciones.",
             time: "Hace 5 minutos",
-            unread: false,
-            image: "/planta-logo.png"
+            unread: true,
+            image: "/security-icon.png"
         },
         {
-            title: "Clima Actualizado",
-            message: "Se esperan lluvias fuertes en tu región.",
-            detail: "Protege tus cultivos para evitar daños.",
+            title: "Patrón Detectado",
+            message: "Se detectó un patrón de vandalismo en tu zona.",
+            detail: "Monitorea el área y colabora con los vecinos para prevenir más incidentes.",
+            time: "Hace 30 minutos",
+            unread: true,
+            image: "/heatmap-icon.png"
+        },
+        {
+            title: "Emergencia en Curso",
+            message: "¡Emergencia! Se reportó una fuga de gas en el sector Norte.",
             time: "Hace 1 hora",
             unread: false,
-            image: "/planta-logo.png"
+            image: "/alert-icon.png"
         },
         {
-            title: "Nuevo Mensaje",
-            message: "Tu solicitud de crédito ha sido aprobada.",
+            title: "Nuevo Reporte de Incidente",
+            message: "Un robo en tu área ha sido reportado recientemente.",
+            detail: "Haz clic para obtener más información y coordinar la respuesta con las autoridades.",
             time: "Hace 2 horas",
             unread: false,
-            image: "/planta-logo.png"
+            image: "/incident-icon.png"
         },
         {
-            title: "Evento de Capacitación",
-            message: "Inscríbete al taller de agricultura sostenible.",
-            detail: "Fecha: 15 de diciembre.",
+            title: "Alerta de Seguridad Preventiva",
+            message: "Un patrón de asaltos ha sido identificado cerca de tu ubicación.",
+            detail: "Mantente alerta y asegúrate de tomar precauciones adicionales.",
             time: "Hace 3 horas",
             unread: false,
-            image: "/planta-logo.png"
+            image: "/warning-icon.png"
         },
         {
-            title: "Notificación de Seguridad",
-            message: "Se detectó un intento de acceso sospechoso.",
-            detail: "Revisa la actividad reciente en tu cuenta.",
+            title: "Notificación de Actividad Sospechosa",
+            message: "Se detectó actividad sospechosa cerca de tu dirección registrada.",
             time: "Hace 5 horas",
             unread: false,
-            image: "/planta-logo.png"
+            image: "/suspicious-activity-icon.png"
         },
         {
-            title: "Actualización de Producto",
-            message: "Nuevo fertilizante orgánico disponible.",
+            title: "Alerta de Seguridad Relevante",
+            message: "Se reportó un posible intento de secuestro en las cercanías.",
+            detail: "Consulta el mapa para obtener detalles y avisa a tus vecinos.",
             time: "Hace 1 día",
             unread: false,
-            image: "/planta-logo.png"
+            image: "/kidnap-icon.png"
         },
         {
-            title: "Alerta de Cultivo",
-            message: "Plaga detectada en tu área.",
-            detail: "Consulta las recomendaciones para mitigación.",
+            title: "Nuevo Incidente Reportado",
+            message: "Un incendio ha sido reportado en tu zona.",
+            detail: "Haz clic para seguir el progreso y recibir alertas de evacuación.",
             time: "Hace 2 días",
             unread: false,
-            image: "/planta-logo.png"
+            image: "/fire-icon.png"
         }
-
     ];
+
     {/*
                 {
             title: "Nueva Oferta",

@@ -1,0 +1,85 @@
+#menu-lateral {
+    width: 250px;
+    height: 80vh;
+    background-color: white;
+    padding: 2rem .5rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#menu-lateral .icon-menu {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+#menu-lateral .icon-menu-flecha {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.menu-item {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item button {
+    border: none;
+    color: #333;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    padding: 5px;
+    height: 2rem;
+}
+
+.menu-item>button {
+    background: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.menu-item>button>p {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.menu-item>button>span {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.menu-item button:hover {
+    background-color: #d9ccf3;
+}
+
+.sub-menu {
+    display: none;
+    flex-direction: column;
+}
+
+.sub-menu button {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 20px;
+    background: #f7f7f7;
+}
+
+.sub-menu button:hover {
+    background-color: #f1eaff;
+}
+
+.menu-item.open .sub-menu {
+    display: flex;
+    /* Muestra submenús al activar la clase 'open' */
+}

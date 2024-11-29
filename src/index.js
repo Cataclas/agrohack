@@ -5,10 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Workbox } from 'workbox-window';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-if ('serviceWorker' in navigator) {
-  const wb = new Workbox('/service-worker.js');
+// Configura la URL del service worker correctamente
+const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+
+if ('serviceWorker' in navigator && swUrl) {
+  const wb = new Workbox(swUrl);
   wb.register();
 }
 
@@ -18,7 +22,5 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// Si deseas medir el rendimiento de tu aplicación, puedes pasar una función a reportWebVitals
 reportWebVitals();

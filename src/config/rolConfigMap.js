@@ -1,6 +1,6 @@
 // En ../config/rolConfigMap.js
 const rolConfigMap = {
-    productor: [
+    usuario: [
       {
         position: [3.4372, -76.5225],
         popupText: `
@@ -30,7 +30,7 @@ const rolConfigMap = {
         `,
       },
     ],
-    comprador: [
+    otro: [
       {
         position: [4.7110, -74.0721],
         popupText: `

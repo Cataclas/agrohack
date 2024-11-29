@@ -25,6 +25,7 @@
     padding: 1rem;
     background: white;
     border-radius: 15px;
+    position: relative;
 }
 
 .chart-loading {
@@ -72,7 +73,7 @@
 }
 
 .question-input {
-    width: calc(100% - 20px);
+    width: 100%;
     height: 100px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -135,6 +136,22 @@
     background-color: #f9fdf9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+}
+
+.copy-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.copy-button:hover {
+    color: #007BFF;
+    /* Cambia el color al pasar el mouse */
 }
 
 @keyframes highlight {

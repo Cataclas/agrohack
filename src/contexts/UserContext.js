@@ -6,7 +6,7 @@ const UserContext = createContext();
 
 // Proveedor del contexto que envuelve a toda la aplicación
 export const UserProvider = ({ children }) => {
-  const [role, setRole] = useState('guest'); // Role predeterminado
+  const [role, setRole] = useState('general'); // Role predeterminado
 
   // Función para cambiar el rol (para efectos de demostración)
   const setUserRole = (newRole) => {

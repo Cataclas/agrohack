@@ -12,13 +12,10 @@ header {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     height: 3rem;
+    margin-top: calc(4rem + 6px);
 }
 
 /* Añadir padding al contenido para que no quede oculto debajo del header */
-body {
-    padding-top: 5rem;
-    /* Ajusta esto según la altura de tu header */
-}
 
 .header-content {
     display: flex;
@@ -28,9 +25,10 @@ body {
     padding: 0 3rem 0 0;
 }
 
-.logo {
+.header-content .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    width: max-content;
 }
 
 .logo a {
@@ -93,6 +91,17 @@ body {
 .menu .auth {
     display: flex;
     gap: 1rem;
+}
+
+#auth {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logoPerfil {
+    display: flex;
+    cursor: pointer;
 }
 
 /* Estilo base para los ítems del menú */
@@ -253,6 +262,58 @@ header .container {
     text-decoration: underline;
 }
 
+.settings-menu {
+    position: absolute;
+    top: 50px;
+    /* Ajusta la posición vertical */
+    right: 20px;
+    /* Ajusta la posición horizontal */
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    border-radius: 4px;
+    padding: 10px;
+    margin: .5rem 1rem;
+}
+
+.settings-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.settings-menu li {
+    padding: .5rem;
+    display: flex;
+}
+
+.settings-menu li a,
+.settings-menu li button {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding-left: 1rem;
+    width: 100%;
+}
+
+.settings-menu li:hover,
+.settings-menu li button:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.settings-menu li:last-child {
+    border-top: 2px solid lightgrey;
+}
+
+.authItemTres {
+    color: green;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    cursor: context-menu;
+}
+
 /* Estilos para pantalla pequeña */
 @media (max-width: 768px) {
     .login-form {
@@ -299,11 +360,12 @@ header .container {
     }
 
     nav,
-    .auth {
+    #auth {
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
+
 
     .navItem {
         padding: 0.5rem 0;

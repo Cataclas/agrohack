@@ -1,0 +1,41 @@
+#roleButtons.roles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    border-top: 3px solid grey;
+    border-bottom: 3px solid grey;
+    height: 2rem;
+    position: fixed;
+    top: 0;
+    background: white;
+    z-index: 1000;
+    gap: 3rem;
+}
+
+.roles button {
+    display: inline-block;
+    padding: .5rem 2rem;
+    font-size: 1.1rem;
+    color: white;
+    background: #4caf50;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: calc((100% / 3) - 6px);
+    opacity: .8;
+}
+
+.roles button:first-child {
+    background: #ff9800;
+}
+
+.roles button:last-child {
+    background: #e91e63;
+}
+
+.roles button:hover {
+    opacity: 1;
+}

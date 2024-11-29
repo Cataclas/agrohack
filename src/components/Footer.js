@@ -12,7 +12,7 @@ const Footer = () => {
     },
     {
       name: "Cristhian Santamaria",
-      role: "Desarrollador",
+      role: "Analista de datos",
       linkedin: "https://www.linkedin.com/in/miembro2/",
       image: `${process.env.PUBLIC_URL}/cristhian_santamaria.jpeg`, // Ruta de la imagen
     },

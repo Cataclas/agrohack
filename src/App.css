@@ -41,40 +41,6 @@ body {
   color: #61dafb;
 }
 
-.roles {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  width: calc(100% - 2rem);
-  border-top: 3px solid grey;
-  border-bottom: 3px solid grey;
-}
-
-.roles button {
-  display: inline-block;
-  padding: .5rem 2rem;
-  font-size: 1.1rem;
-  color: white;
-  background: #4caf50;
-  border: 1px solid;
-  border-radius: 0;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  width: calc((100% / 3) - 6px);
-}
-
-.roles button:first-child {
-  background: #ff9800;
-}
-
-.roles button:last-child {
-  background: #e91e63;
-}
-
-.roles button:hover {
-  background: #568E44;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -84,4 +50,8 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.main-content-monitor{
+  display: flex;
 }

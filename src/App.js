@@ -1,33 +1,26 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Notificaciones from "./pages/Notificaciones";
 import Dashboard from "./pages/Dashboard";
 import RegisterPage from "./pages/RegisterPage";
-import CertificadosPage from "./pages/TiendaPage";
-import TiendaPage from "./pages/CertificadosPage";
+import CertificadosPage from "./pages/QrValidationPage";
+import TiendaPage from "./pages/TiendaPage";
 import MapPage from "./pages/MapPage";
-import { UserProvider, useUser } from './contexts/UserContext';
+import GestionPage from "./pages/GestionPage";
+import PerfilPage from "./pages/PerfilPage";
+import IncidentReportPage from "./pages/IncidentReportPage";
+import MonitoreoPage from "./pages/MonitoreoPage";
+import { HashRouter, Routes, Route } from "react-router-dom";
+
+import { UserProvider } from './contexts/UserContext';
+import RoleButtons from './components/RoleButtons';  // Componente para cambiar el rol
+
 import './App.css';
-
-
-// Componente para cambiar el rol
-const RoleButtons = () => {
-  const { setUserRole } = useUser();
-
-  return (
-    <div className="roles">
-      <button onClick={() => setUserRole('productor')}>Productor</button>
-      <button onClick={() => setUserRole('comprador')}>Comprador</button>
-      <button onClick={() => setUserRole('distribuidor')}>Distribuidor</button>
-    </div>
-  );
-};
 
 function App() {
   return (
     <UserProvider>
-      <BrowserRouter>
+      <HashRouter>
         <RoleButtons /> {/* Agrega los botones para cambiar el rol aquí */}
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -37,10 +30,16 @@ function App() {
           <Route path="/mapa" element={<MapPage />} />
           <Route path="/certificados" element={<CertificadosPage />} />
           <Route path="/tienda" element={<TiendaPage />} />
+          <Route path="/gestion" element={<GestionPage />} />
+          <Route path="/perfil" element={<PerfilPage />} />
+          <Route path="/monitoreo" element={<MonitoreoPage />} />
+          <Route path="/registro-incidentes" element={<IncidentReportPage />} />
+
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </UserProvider>
   );
 }
+
 
 export default App;

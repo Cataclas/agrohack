@@ -1,16 +1,16 @@
 import React from "react";
-import Dashboard from "../components/Dashboard";
+import Perfil from "../components/Perfil";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const DashboardPage = () => {
+const PerfilPage = () => {
     return (
-        <div id="dashboard">
+        <div id="perfil">
             <Header />
-            <Dashboard />
+            <Perfil />
             <Footer />
         </div>
     );
 };
 
-export default DashboardPage;
+export default PerfilPage;

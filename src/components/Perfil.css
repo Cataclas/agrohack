@@ -1,0 +1,118 @@
+.perfil-container {
+    padding: 3rem;
+    max-width: 800px;
+    margin: 3rem auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    height: 70vh;
+}
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.perfil-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #ddd;
+}
+
+.perfil-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.perfil-header p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.perfil-details {
+    font-size: 16px;
+    color: #333;
+}
+
+.perfil-details h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.perfil-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.perfil-details li {
+    margin: 10px 0;
+}
+
+.perfil-details li strong {
+    color: #555;
+}
+
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.perfil-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #ddd;
+}
+
+.perfil-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.perfil-header p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.perfil-details {
+    font-size: 16px;
+    color: #333;
+}
+
+.perfil-details h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.perfil-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.perfil-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.perfil-table td strong {
+    color: #555;
+}
+
+.perfil-table tr:hover {
+    background-color: #ddd;
+}
